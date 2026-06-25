@@ -382,6 +382,11 @@ input, select, textarea { font-family: var(--font); }
 .td-muted { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
 .td-truncate { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+/* Critical row highlight — subtle left border only, no background flood */
+.data-table tbody tr.has-critical td:first-child {
+  border-left: 2px solid var(--p-critical-border);
+}
+
 /* ── Filter Bar ─────────────────────────────────────────────────── */
 .filter-bar {
   display: flex;
