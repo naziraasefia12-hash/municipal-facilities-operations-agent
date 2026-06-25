@@ -901,3 +901,143 @@ input, select, textarea { font-family: var(--font); }
 
 /* Panel inner padding helper */
 .panel-body { padding: 0 var(--sp-4); }
+
+/* ── Work Order action bar ───────────────────────────────────── */
+/* Sits below the banner inside the same panel — toolbar style */
+.wo-action-bar {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-surface-alt);
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  min-height: 38px;
+}
+.wo-action-group {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-right: 1px solid var(--border);
+}
+.wo-action-group:last-child { border-right: none; }
+.wo-action-group-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.wo-approve-form {
+  padding: var(--sp-3) var(--sp-4);
+  border-top: 1px solid var(--s-pending-border);
+  background: var(--s-pending-bg);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+.wo-approve-form-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--s-pending-text);
+  white-space: nowrap;
+}
+
+/* ── Form section dividers ───────────────────────────────────── */
+.form-section-divider {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: var(--sp-2);
+  margin: var(--sp-4) 0 var(--sp-3);
+  border-bottom: 1px solid var(--border-row);
+}
+.form-section-divider:first-child { margin-top: 0; }
+
+/* ── How-it-works sidebar steps ─────────────────────────────── */
+.how-steps { display: flex; flex-direction: column; gap: 0; }
+.how-step {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border-row);
+  align-items: flex-start;
+}
+.how-step:last-child { border-bottom: none; }
+.how-step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.how-step-text { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+/* ── Post-submission result layout ───────────────────────────── */
+.submit-result-grid {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: var(--sp-4);
+  align-items: start;
+}
+.submit-summary-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.submit-summary-header {
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--bg-surface-alt);
+  border-bottom: 1px solid var(--border);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+.submit-summary-body { padding: var(--sp-3); }
+.submit-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-row);
+  font-size: 12px;
+  gap: var(--sp-2);
+}
+.submit-summary-row:last-child { border-bottom: none; }
+.submit-summary-key { color: var(--text-muted); white-space: nowrap; }
+.submit-summary-val { color: var(--text-primary); font-weight: 500; text-align: right; }
+
+/* ── Sidebar metadata sections ───────────────────────────────── */
+.side-section { margin-bottom: var(--sp-4); }
+.side-section:last-child { margin-bottom: 0; }
+.side-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding-bottom: var(--sp-1);
+  margin-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--border-row);
+}
+.side-field { margin-bottom: var(--sp-2); }
+.side-field:last-child { margin-bottom: 0; }
+.side-field-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 2px; }
+.side-field-value { font-size: 12px; color: var(--text-primary); line-height: 1.4; }
+.side-field-value.muted { color: var(--text-secondary); }
+.side-field-value.mono { font-family: var(--font-mono); font-size: 11.5px; }
+.side-field-value.danger { color: var(--p-critical-text); }
