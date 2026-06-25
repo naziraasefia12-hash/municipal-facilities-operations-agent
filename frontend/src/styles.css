@@ -902,6 +902,51 @@ input, select, textarea { font-family: var(--font); }
 /* Panel inner padding helper */
 .panel-body { padding: 0 var(--sp-4); }
 
+/* ── Analytics page ─────────────────────────────────────────── */
+.analytics-report-summary {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: var(--sp-1) 0 var(--sp-3);
+  border-bottom: 1px solid var(--border-row);
+  margin-bottom: var(--sp-4);
+}
+.analytics-report-summary strong { color: var(--text-secondary); font-weight: 600; }
+.analytics-section { margin-bottom: var(--sp-4); }
+.analytics-section-header {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: var(--sp-2);
+  margin-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+/* Two-col grid shared by both Analytics sections */
+.analytics-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+/* Team workload rows inside Analytics */
+.analytics-team-table td { padding: 7px 14px; }
+
+/* Audit event chip color mapping — reuses badge base, adds semantic class */
+.audit-chip-created   { color: var(--s-open-text);        background: var(--s-open-bg);        border-color: var(--s-open-border); }
+.audit-chip-triaged   { color: var(--text-secondary);     background: var(--bg-surface-alt);   border-color: var(--border); }
+.audit-chip-status    { color: var(--s-inprogress-text);  background: var(--s-inprogress-bg);  border-color: var(--s-inprogress-border); }
+.audit-chip-assigned  { color: var(--text-secondary);     background: var(--bg-surface-alt);   border-color: var(--border); }
+.audit-chip-escalated { color: var(--s-escalated-text);   background: var(--s-escalated-bg);   border-color: var(--s-escalated-border); }
+.audit-chip-pending   { color: var(--s-pending-text);     background: var(--s-pending-bg);     border-color: var(--s-pending-border); }
+.audit-chip-approved  { color: var(--p-low-text);         background: var(--p-low-bg);         border-color: var(--p-low-border); }
+
+/* Audit detail text formatting */
+.audit-detail-key { color: var(--text-muted); font-size: 11px; }
+.audit-detail-val { color: var(--text-secondary); font-size: 12px; }
+.audit-wo-link { color: var(--accent); cursor: pointer; font-family: var(--font-mono); font-size: 12px; }
+.audit-wo-link:hover { text-decoration: underline; }
+
 /* ── Work Order action bar ───────────────────────────────────── */
 /* Sits below the banner inside the same panel — toolbar style */
 .wo-action-bar {
