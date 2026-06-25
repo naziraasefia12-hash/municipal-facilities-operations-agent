@@ -7,3 +7,11 @@ __pycache__/
 backend/.env
 frontend/.env
 .DS_Store
+
+# Local SQLite databases — kept on disk, not tracked in Git
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Editor / tool local settings
+.claude/settings.local.json
