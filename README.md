@@ -248,9 +248,14 @@ pytest tests/ -v
 
 ## Screenshots
 
-> _Screenshots to be added. Run the app locally to see the full interface._
->
-> Pages: Dashboard · Work Orders · New Work Order · Work Order Detail · Buildings · Teams · Analytics · Audit Log · Agent Test
+### Dashboard
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Work Orders
+![Work Orders](docs/screenshots/work-orders.png)
+
+### Analytics
+![Analytics](docs/screenshots/analytics.png)
 
 ---
 
